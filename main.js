@@ -7,6 +7,31 @@
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ homeLoad)
+/* harmony export */ });
+function homeLoad() {
+    const mainContent = document.querySelector('#main_content');
+  
+    const imageContainer = document.createElement('div');
+    imageContainer.id = 'image_container';
+    mainContent.appendChild(imageContainer);
+  
+    const restaurantImage = document.createElement('img');
+    restaurantImage.src = '/src/images/restaurant.jpg';
+    restaurantImage.id = 'restaurant_image';
+    imageContainer.appendChild(restaurantImage);
+
+    restaurantImage.style.width = '100vw';
+    restaurantImage.style.height = '92vh';
+    restaurantImage.style.objectFit = 'cover';
+  };
+
+/***/ }),
+/* 2 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ menuLoad)
 /* harmony export */ });
 function menuLoad() {
@@ -80,27 +105,62 @@ function menuLoad() {
       dessert.textContent = 'Arbitrary Dessert';
       dessertList.appendChild(dessert);
     }
-  };
 
-/***/ }),
-/* 2 */
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+    cardContainer.style.width = '100%';
+    cardContainer.style.height = '100%';
+    cardContainer.style.display = 'grid';
+    cardContainer.style.gridTemplate = '1fr / 1fr 1fr 1fr';
+    cardContainer.style.alignItems = 'center';
+    cardContainer.style.justifyContent = 'center';
 
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ homeLoad)
-/* harmony export */ });
-function homeLoad() {
-    const mainContent = document.querySelector('#main_content');
-  
-    const imageContainer = document.createElement('div');
-    imageContainer.id = 'image_container';
-    mainContent.appendChild(imageContainer);
-  
-    const restaurantImage = document.createElement('img');
-    restaurantImage.src = '/src/images/restaurant.jpg';
-    restaurantImage.id = 'restaurant_image';
-    imageContainer.appendChild(restaurantImage);
+    appCard.style.display = 'flex';
+    appCard.style.justifyContent = 'center';
+    entreeCard.style.display = 'flex';
+    entreeCard.style.justifyContent = 'center';
+    dessertCard.style.display = 'flex';
+    dessertCard.style.justifyContent = 'center';
+
+    appList.style.display = 'flex';
+    appList.style.flexDirection = 'column';
+    appList.style.alignItems = 'center';
+    appList.style.gap = '30px';
+    appList.style.border = 'solid 2px goldenrod';
+    appList.style.borderRadius = '3%'
+    appList.style.height = '280px';
+    appList.style.width = '28vw';
+
+    entreeList.style.display = 'flex';
+    entreeList.style.flexDirection = 'column';
+    entreeList.style.alignItems = 'center';
+    entreeList.style.gap = '30px';
+    entreeList.style.border = 'solid 2px goldenrod';
+    entreeList.style.borderRadius = '3%'
+    entreeList.style.height = '280px';
+    entreeList.style.width = '28vw';
+
+    dessertList.style.display = 'flex';
+    dessertList.style.flexDirection = 'column';
+    dessertList.style.alignItems = 'center';
+    dessertList.style.gap = '30px';
+    dessertList.style.border = 'solid 2px goldenrod';
+    dessertList.style.borderRadius = '3%'
+    dessertList.style.height = '280px';
+    dessertList.style.width = '28vw';
+
+    appHead.style.color = 'white';
+    appHead.style.fontSize = '30px';
+    appHead.style.marginTop = '24px';
+    entHead.style.color = 'white';
+    entHead.style.fontSize = '30px';
+    entHead.style.marginTop = '24px';
+    desHead.style.color = 'white';
+    desHead.style.fontSize = '30px';
+    desHead.style.marginTop = '24px';
+    
+    const menu = document.querySelectorAll('.menu_item');
+    menu.forEach(item => {
+      item.style.color = 'white';
+    })
   };
 
 /***/ }),
@@ -138,6 +198,37 @@ function contactLoad() {
       contactItem.textContent = 'Location';
       card.appendChild(contactItem);
     }
+
+    contactCont.style.display = 'flex';
+    contactCont.style.alignItems = 'center';
+    contactCont.style.justifyContent = 'center';
+    contactCont.style.width = '100%';
+    contactCont.style.height = '100%';
+
+    card.style.border = 'solid 5px goldenrod';
+    card.style.width = '18vw';
+    card.style.height = '50vh';
+    card.style.borderRadius = '3%';
+    card.style.display = 'flex';
+    card.style.flexDirection = 'column';
+    card.style.alignItems = 'center';
+    card.style.justifyContent = 'center';
+
+    contactHead.style.color = 'white';
+    contactHead.style.fontSize = '35px';
+
+    const labels = document.querySelectorAll('.item_label');
+    labels.forEach(label => {
+      label.style.color = 'white';
+      label.style.fontSize = '21px';
+      label.style.marginTop = '10px';
+    });
+
+    const items = document.querySelectorAll('.contact_item');
+    items.forEach(item => {
+      item.style.color = 'white';
+      item.style.cursor = 'pointer';
+    })
   }
 
 /***/ })
@@ -201,14 +292,15 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
-/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1);
+/* harmony import */ var _home__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
+/* harmony import */ var _menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2);
 /* harmony import */ var _contact__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3);
 
 
 
 
 const pageLoad = () => {
+  const body = document.querySelector('body')
   // page content
   const content = document.querySelector('#content');
   // create a container that holds all top information that will be cleared and appended
@@ -225,17 +317,12 @@ const pageLoad = () => {
   content.append(bottomContainer);
 
   const bottomText = document.createElement('div');
-  bottomText.id = 'bottom_text';
   bottomContainer.append(bottomText);
 
   const restaurantHeadline = document.createElement('h1');
-  restaurantHeadline.textContent = 'Charkoal: A New Take On American Cuisine';
-  restaurantHeadline.id = 'restaurant_headline';
   bottomText.appendChild(restaurantHeadline);
 
   const restaurantInfo = document.createElement('div');
-  restaurantInfo.textContent = "Welcome to Charkoal, a nonexistent culinary experience. You can't find us at any specific location, but you're welcome to look!";
-  restaurantInfo.id = 'restaurant_info';
   bottomText.appendChild(restaurantInfo);
 
   const navBar = document.createElement('div');
@@ -259,6 +346,43 @@ const pageLoad = () => {
   contactBtn.textContent = 'Contact';
   contactBtn.id = 'contact_btn';
   navBar.appendChild(contactBtn);
+
+  body.style.backgroundColor = 'black';
+
+  mainContent.style.height = '92vh';
+  mainContent.style.width = '100vw';
+
+  bottomContainer.style.margin = '-5px 15px 0px 15px';
+  bottomContainer.style.display = 'flex';
+  bottomContainer.style.justifyContent = 'space-between';
+
+  bottomText.id = 'bottom_text';
+  bottomText.style.display = 'flex';
+  bottomText.style.flexDirection = 'column';
+  bottomText.style.justifyContent = 'center';
+  bottomText.style.height = '8vh';
+
+  restaurantHeadline.textContent = 'Charkoal: A New Take On American Cuisine';
+  restaurantHeadline.id = 'restaurant_headline';
+  restaurantHeadline.style.color = 'whitesmoke';
+  restaurantHeadline.style.fontSize = '2vw';
+
+  restaurantInfo.textContent = "Welcome to Charkoal, a nonexistent culinary experience. You can't find us at any specific location, but you're welcome to look!";
+  restaurantInfo.id = 'restaurant_info';
+  restaurantInfo.style.color = 'whitesmoke';
+  restaurantInfo.style.fontSize = '1vw';
+
+  navBar.style.display = 'flex';
+  navBar.style.alignItems = 'center';
+  navBar.style.justifyContent = 'flex-end';
+  navBar.style.gap = '8px';
+
+  const navigations = document.querySelectorAll('.nav_item');
+  navigations.forEach(button => {
+    button.style.color = 'white';
+    button.style.fontSize = '20px';
+    button.style.cursor = 'pointer';
+  })
 };
 
 const contentClear = () => {
