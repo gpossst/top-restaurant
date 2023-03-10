@@ -6,5 +6,10 @@ module.exports = {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
   },
+  use: [
+    {
+      loader: 'file-loader',
+    },
+  ],
   mode: 'none',
 };
