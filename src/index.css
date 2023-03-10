@@ -1,0 +1,142 @@
+body {
+    background-color: black;
+}
+
+/* NavBar */
+#restaurant_headline {
+    color: whitesmoke;
+    font-size: 2vw;
+}
+
+#restaurant_info {
+    color: whitesmoke;
+    font-size: 1vw;
+}
+
+#bottom_container {
+    margin: -5px 15px 0px 15px;
+    display: flex;
+    justify-content:space-between;
+}
+
+#bottom_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 8vh;
+}
+
+.nav_item {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav_item:hover {
+    color: goldenrod;
+}
+
+#nav_bar {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.grey {
+    color: grey;
+    border-bottom: solid 1.5px grey;
+}
+
+/* Main Content Container */
+#main_content {
+    height: 92vh;
+    width: 100vw;
+}
+
+/* Home Page Items */
+#restaurant_image {
+    width: 100vw;
+    height: 92vh;
+    object-fit: cover;
+}
+
+/* Menu Page Items */
+#card_container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+#app_card, #entree_card, #dessert_card {
+    display: flex;
+    justify-content: center;
+}
+
+#app_list, #entree_list, #dessert_list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    border: solid 2px goldenrod;
+    border-radius: 3%;
+    height: 280px;
+    width: 28vw;
+}
+
+#app_head, #ent_head, #des_head {
+    color: white;
+    font-size: 30px;
+    margin-top: 24px;
+}
+.menu_item {
+    color: white;
+}
+
+.menu_item:hover {
+    color: goldenrod;
+}
+
+/* Contact Page Items */
+
+#contact_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+#contact_card {
+    border: solid 5px goldenrod;
+    width: 18vw;
+    height: 50vh;
+    border-radius: 3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact_head {
+    color: white;
+    font-size: 35px;
+}
+
+.item_label {
+    color: white;
+    font-size: 21px;
+    margin-top: 10px;
+}
+
+.contact_item {
+    color: white;
+    cursor: pointer;
+}
+
+.contact_item:hover {
+    color: goldenrod;
+}
