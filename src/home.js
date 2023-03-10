@@ -9,4 +9,8 @@ export default function homeLoad() {
     restaurantImage.src = '/src/images/restaurant.jpg';
     restaurantImage.id = 'restaurant_image';
     imageContainer.appendChild(restaurantImage);
+
+    restaurantImage.style.width = '100vw';
+    restaurantImage.style.height = '92vh';
+    restaurantImage.style.objectFit = 'cover';
   };

@@ -3,6 +3,7 @@ import menuLoad from './menu'
 import contactLoad from './contact'
 
 const pageLoad = () => {
+  const body = document.querySelector('body')
   // page content
   const content = document.querySelector('#content');
   // create a container that holds all top information that will be cleared and appended
@@ -19,17 +20,12 @@ const pageLoad = () => {
   content.append(bottomContainer);
 
   const bottomText = document.createElement('div');
-  bottomText.id = 'bottom_text';
   bottomContainer.append(bottomText);
 
   const restaurantHeadline = document.createElement('h1');
-  restaurantHeadline.textContent = 'Charkoal: A New Take On American Cuisine';
-  restaurantHeadline.id = 'restaurant_headline';
   bottomText.appendChild(restaurantHeadline);
 
   const restaurantInfo = document.createElement('div');
-  restaurantInfo.textContent = "Welcome to Charkoal, a nonexistent culinary experience. You can't find us at any specific location, but you're welcome to look!";
-  restaurantInfo.id = 'restaurant_info';
   bottomText.appendChild(restaurantInfo);
 
   const navBar = document.createElement('div');
@@ -53,6 +49,43 @@ const pageLoad = () => {
   contactBtn.textContent = 'Contact';
   contactBtn.id = 'contact_btn';
   navBar.appendChild(contactBtn);
+
+  body.style.backgroundColor = 'black';
+
+  mainContent.style.height = '92vh';
+  mainContent.style.width = '100vw';
+
+  bottomContainer.style.margin = '-5px 15px 0px 15px';
+  bottomContainer.style.display = 'flex';
+  bottomContainer.style.justifyContent = 'space-between';
+
+  bottomText.id = 'bottom_text';
+  bottomText.style.display = 'flex';
+  bottomText.style.flexDirection = 'column';
+  bottomText.style.justifyContent = 'center';
+  bottomText.style.height = '8vh';
+
+  restaurantHeadline.textContent = 'Charkoal: A New Take On American Cuisine';
+  restaurantHeadline.id = 'restaurant_headline';
+  restaurantHeadline.style.color = 'whitesmoke';
+  restaurantHeadline.style.fontSize = '2vw';
+
+  restaurantInfo.textContent = "Welcome to Charkoal, a nonexistent culinary experience. You can't find us at any specific location, but you're welcome to look!";
+  restaurantInfo.id = 'restaurant_info';
+  restaurantInfo.style.color = 'whitesmoke';
+  restaurantInfo.style.fontSize = '1vw';
+
+  navBar.style.display = 'flex';
+  navBar.style.alignItems = 'center';
+  navBar.style.justifyContent = 'flex-end';
+  navBar.style.gap = '8px';
+
+  const navigations = document.querySelectorAll('.nav_item');
+  navigations.forEach(button => {
+    button.style.color = 'white';
+    button.style.fontSize = '20px';
+    button.style.cursor = 'pointer';
+  })
 };
 
 const contentClear = () => {
